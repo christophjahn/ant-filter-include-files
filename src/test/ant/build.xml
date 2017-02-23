@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<project name="TestAntTools" basedir="." default="" xmlns:jt="antlib:com.jahntech.tools.ant">
+
+	<property name="base.dir" value="../../.."/>
+	<property name="lib.dir" value="${base.dir}/target"/>
+	
+	<property name="test.file" value="${base.dir}/src/test/resources/main_file.txt"/>
+
+
+	<typedef resource="antlib.xml">
+		<classpath>
+			<pathelement location="${lib.dir}/ant-0.0.1-SNAPSHOT.jar" />
+		</classpath>
+	</typedef>
+	
+	
+	<!-- ================================= 
+          target: TestProcessIncludes              
+         ================================= -->
+    <target name="TestProcessIncludes" depends="" description="Test the filter processIncludes">
+		<loadfile srcfile="${test.file}" property="test.file.processed">
+			<filterchain>
+	    	    <processIncludes>
+	    	    	<searchdir value="."/>
+	    	    	<searchdir value="../resources"/> 
+    		    </processIncludes>
+			</filterchain>
+    	</loadfile>
+		<echo>${test.file.processed}</echo>
+   	</target>
+	
+</project>

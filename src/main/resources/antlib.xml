@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<antlib>
+
+	<!-- Tasks  
+
+	<taskdef name="processIncludes"
+		classname="com.jahntech.tools.ant.filters.ProcessIncludes" />
+-->
+
+
+
+	<!-- Conditions --> 
+	<typedef name="processIncludes"
+		classname="com.jahntech.tools.ant.filters.ProcessIncludes" />
+	
+
+	
+
+</antlib>

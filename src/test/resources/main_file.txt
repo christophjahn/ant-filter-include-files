@@ -1,0 +1,7 @@
+# !/bin.bash
+
+# This is before include
+
+##include "incl_file.txt"
+
+# This is after include
